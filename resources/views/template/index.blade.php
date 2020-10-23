@@ -67,16 +67,13 @@
                             <ul>
                                 <li class="active"><a href="index.html">Home</a></li>
                                 <li class="has-dropdown">
-                                    <a href="work.html">Works</a>
+                                    <a href="work.html">Timesheet recap</a>
                                     <ul class="dropdown">
                                         <li><a href="work-grid.html">Works grid with text</a></li>
                                         <li><a href="work-grid-without-text.html">Works grid w/o text</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="services.html">Services</a></li>
-                                <li><a href="blog.html">Blog</a></li>
                                 <li><a href="about.html">About</a></li>
-                                <li><a href="shop.html">Shop</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
                         </div>
@@ -85,7 +82,7 @@
             </div>
         </nav>
 
-        <section id="home" class="video-hero" style="height: 700px; background-image: url(images/cover_img_1.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
+        <section id="home" class="video-hero" style="height: 700px; background-image: url(bg/bg.jpg);  background-size:cover; background-position: center center;background-attachment:fixed;" data-section="home">
             <div class="overlay"></div>
             <!-- <a class="player" data-property="{videoURL:'https://www.youtube.com/watch?v=vqqt5p0q-eU',containment:'#home', showControls:false, autoPlay:true, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></a>  -->
             <div class="display-t text-center">
@@ -93,9 +90,8 @@
                     <div class="container">
                         <div class="col-md-12 col-md-offset-0">
                             <div class="animate-box">
-                                <h2>Take on your biggest projects and goals</h2>
-                                <p>with Unapp's high quality features</p>
-                                <p><a href="gallery.html" class="btn btn-primary btn-lg btn-custom">Get premium</a></p>
+                                <h2 style="margin-bottom: 50px;">This website is made to see timesheet recaps every time<span style="color: greenyellow;">.</span></h2>
+                                <p><a href="gallery.html" class="btn btn-primary btn-lg btn-custom">Get to know more..</a></p>
                             </div>
                         </div>
                     </div>
@@ -269,7 +265,7 @@
             </div>
         </div>
 
-        <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(images/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
+        <div id="colorlib-counter" class="colorlib-counters" style="background-image: url(bg/bg.jpg);" data-stellar-background-ratio="0.5">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row">
@@ -313,7 +309,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                        <h2>News Latest</h2>
+                        <h2>Latest News</h2>
                     </div>
                 </div>
                 <div class="row">
@@ -347,88 +343,6 @@
                 </div>
             </div>
         </div>
-
-        <!-- <div id="colorlib-subscribe" class="colorlib-subscribe" style="background-image: url(images/cover_img_1.jpg);" data-stellar-background-ratio="0.5">
-            <div class="overlay"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1 text-center colorlib-heading animate-box">
-                        <h2>Already trusted by over 10,000 users</h2>
-                        <p>Subscribe to receive unapp tips from instructors right to your inbox.</p>
-                    </div>
-                </div>
-                <div class="row animate-box">
-                    <div class="col-md-6 col-md-offset-3">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <form class="form-inline qbstp-header-subscribe">
-                                    <div class="col-three-forth">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" id="email" placeholder="Enter your email">
-                                        </div>
-                                    </div>
-                                    <div class="col-one-third">
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-primary">Subscribe Now</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- <div class="colorlib-pricing">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2 text-center colorlib-heading animate-box">
-                        <h2>Pricing</h2>
-                        <p>Even the all-powerful Pointing has no control about the blind texts it is an almost
-                            unorthographic life One day however a small line of blind text by the name</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3 text-center animate-box">
-                        <div class="pricing">
-                            <h2 class="pricing-heading">Starter</h2>
-                            <div class="price"><sup class="currency">$</sup>9<small>per month</small></div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                            <p><a href="#" class="btn btn-primary">Select Plan</a></p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 text-center animate-box">
-                        <div class="pricing">
-                            <h2 class="pricing-heading">Basic</h2>
-                            <div class="price"><sup class="currency">$</sup>27<small>per month</small></div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                            <p><a href="#" class="btn btn-primary">Select Plan</a></p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 text-center animate-box">
-                        <div class="pricing">
-                            <h2 class="pricing-heading">Pro</h2>
-                            <div class="price"><sup class="currency">$</sup>74<small>per month</small></div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                            <p><a href="#" class="btn btn-primary">Select Plan</a></p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 text-center animate-box">
-                        <div class="pricing">
-                            <h2 class="pricing-heading">Unlimited</h2>
-                            <div class="price"><sup class="currency">$</sup>140<small>per month</small></div>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                                there live the blind texts.</p>
-                            <p><a href="#" class="btn btn-primary">Select Plan</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
 
         <footer id="colorlib-footer">
             <div class="container">
