@@ -9,20 +9,11 @@
                 <div class="col-md-10 text-right menu-1">
                     <ul>
                         <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
-                        <!-- <li class="has-dropdown">
-                            <a href="work.html">Timesheet recap</a>
-                            <ul class="dropdown">
-                                <li><a href="work-grid.html">
-                                        Last schedule</a></li>
-                                <li><a href="work-grid-without-text.html">
-                                        Schedule today</a></li>
-                            </ul>
-                        </li> -->
                         <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ url('/about') }}">About</a></li>
                         <li><a href="contact.html">Contact</a></li>
                         <li><a href="contact.html"></a></li>
                         <li class="btn" style="background-color: #42e6a4; padding: 10px; margin-right: 10px; margin-left: -20px;"><a href="{{ route('login') }}" style="font-size: 15px;"><b>Login</b></a></li>
-                        <li class="btn" style="background-color: #0278ae;  padding: 10px;"><a href="contact.html" style="font-size: 15px;"><b>Register</b></a></li>
+                        <li class="btn" style="background-color: #0278ae;  padding: 10px;"><a href="{{ route('register')}}" style="font-size: 15px;"><b>Register</b></a></li>
                     </ul>
                 </div>
                 @else

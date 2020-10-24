@@ -26,21 +26,21 @@
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="images/dashboard_full_1.jpg" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="images/dashboard_full_2.jpg" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="images/dashboard_full_3.jpg" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
                         </div>
                     </div>
                 </div>
