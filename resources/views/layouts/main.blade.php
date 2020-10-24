@@ -36,11 +36,11 @@
     <div class="colorlib-loader"></div>
 
     <div id="page">
-        @include('extends.nav')
+        @include('parcial.nav')
 
         @yield('content')
 
-        @include('extends.foot')
+        @include('parcial.foot')
     </div>
 
     <div class="gototop js-top">
@@ -49,7 +49,7 @@
 
     <!-- parcial js -->
     @include('parcial.js')
- 
+
 
 </body>
 

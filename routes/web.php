@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,10 +13,15 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'dashboard']);
+Route::get('/', function () {
+    return view('home.home');
+});
+
 
 Route::group(['prefix' => 'admin'], function () {
     Voyager::routes();
 });
 
-Route::get('/about', [HomeController::class, 'about']);
+Auth::routes();
+
+Route::get('/about', 'HomeController@aboutView')->name('about');
