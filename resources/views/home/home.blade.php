@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-md-offset-0">
                     <div class="animate-box">
                         <h2 style="margin-bottom: 50px;">This website is made to see timesheet recaps every time<span style="color: greenyellow;">.</span></h2>
-                        <p><a href="gallery.html" class="btn btn-primary btn-lg btn-custom">Get to know more..</a></p>
+                        <p><a href="{{ route('about')}}" class="btn btn-primary btn-lg btn-custom">Get to know more..</a></p>
                     </div>
                 </div>
             </div>
@@ -26,21 +26,21 @@
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="images/dashboard_full_1.jpg" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="images/dashboard_full_2.jpg" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="images/dashboard_full_3.jpg" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
                         </div>
                     </div>
                 </div>

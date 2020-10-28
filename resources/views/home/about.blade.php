@@ -43,7 +43,7 @@
         <div class="row">
             <div class="col-md-4 text-center animate-box">
                 <div class="staff-entry">
-                    <a href="#" class="staff-img" style="background-image: url(images/person1.jpg);"></a>
+                    <a href="#" class="staff-img" style="background-image: url(asset/user.png);"></a>
                     <div class="desc">
                         <h3>Muhammad Farras Jibran</h3>
                         <span>Front-end Developer</span>
@@ -61,7 +61,7 @@
             </div>
             <div class="col-md-4 text-center animate-box">
                 <div class="staff-entry">
-                    <a href="#" class="staff-img" style="background-image: url(images/person2.jpg);"></a>
+                    <a href="#" class="staff-img" style="background-image: url(asset/user.png);"></a>
                     <div class="desc">
                         <h3>Akmal Permata Sukma</h3>
                         <span>Back-end Developer</span>
@@ -79,7 +79,7 @@
             </div>
             <div class="col-md-4 text-center animate-box">
                 <div class="staff-entry">
-                    <a href="#" class="staff-img" style="background-image: url(images/person3.jpg);"></a>
+                    <a href="#" class="staff-img" style="background-image: url(asset/user.png);"></a>
                     <div class="desc">
                         <h3>Fauzan Adli</h3>
                         <span>Designer</span>
@@ -97,7 +97,7 @@
             </div>
             <div class="col-md-6 text-center animate-box">
                 <div class="staff-entry">
-                    <a href="#" class="staff-img" style="background-image: url(images/person4.jpg);"></a>
+                    <a href="#" class="staff-img" style="background-image: url(asset/user.png);"></a>
                     <div class="desc">
                         <h3>Syahdah Hamidah</h3>
                         <span>Analiys</span>
@@ -115,7 +115,7 @@
             </div>
             <div class="col-md-6 text-center animate-box">
                 <div class="staff-entry">
-                    <a href="#" class="staff-img" style="background-image: url(images/person4.jpg);"></a>
+                    <a href="#" class="staff-img" style="background-image: url(asset/user.png);"></a>
                     <div class="desc">
                         <h3>Jerry Yusuf Simbolon</h3>
                         <span>Analiys</span>
