@@ -1,5 +1,6 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="{{ asset('fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
 
 <!-- Animate.css -->
 <link rel="stylesheet" href="{{ asset('css/animate.css')}}">

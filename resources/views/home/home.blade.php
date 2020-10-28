@@ -11,7 +11,7 @@
                 <div class="col-md-12 col-md-offset-0">
                     <div class="animate-box">
                         <h2 style="margin-bottom: 50px;">This website is made to see timesheet recaps every time<span style="color: greenyellow;">.</span></h2>
-                        <p><a href="gallery.html" class="btn btn-primary btn-lg btn-custom">Get to know more..</a></p>
+                        <p><a href="{{ route('about')}}" class="btn btn-primary btn-lg btn-custom">Get to know more..</a></p>
                     </div>
                 </div>
             </div>
