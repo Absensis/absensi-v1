@@ -23,7 +23,7 @@
                         <li class="has-dropdown">
                             <a href="work.html">Recap schedule</a>
                             <ul class="dropdown" style="width: 200px;">
-                                <li><a href="work-grid.html">
+                                <li><a href="{{ route('listschedule')}}">
                                         Last schedule</a></li>
                                 <li><a href="work-grid-without-text.html">
                                         Today schedule</a></li>
