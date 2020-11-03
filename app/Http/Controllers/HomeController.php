@@ -21,13 +21,22 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+
+    //  view home
     public function homeView()
     {
         return view('home.home');
     }
 
+    // view about
     public function aboutView()
     {
         return view('home.about');
+    }
+
+    // view list schedule
+    public function scheduleList()
+    {
+        return view('home.listschedule');
     }
 }
