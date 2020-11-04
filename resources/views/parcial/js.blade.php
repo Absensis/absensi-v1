@@ -19,3 +19,9 @@
 <script src="{{ asset('js/jquery.countTo.js')}}"></script>
 <!-- Main -->
 <script src="{{ asset('js/main.js')}}"></script>
+<!-- Datatable -->
+<script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+<!-- Sweet alert -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.28.1/sweetalert2.all.min.js"></script>
+<!-- my js -->
+<script src="{{ asset('js/getdata.js')}}"></script>

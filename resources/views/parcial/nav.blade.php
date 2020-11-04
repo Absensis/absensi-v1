@@ -10,7 +10,6 @@
                     <ul>
                         <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
                         <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ url('/about') }}">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
                         <li><a href="contact.html"></a></li>
                         <li class="btn" style="background-color: #42e6a4; padding: 10px; margin-right: 10px; margin-left: -20px;"><a href="{{ route('login') }}" style="font-size: 15px;"><b>Login</b></a></li>
                         <li class="btn" style="background-color: #0278ae;  padding: 10px;"><a href="{{ route('register')}}" style="font-size: 15px;"><b>Register</b></a></li>
@@ -21,26 +20,20 @@
                     <ul>
                         <li class="{{ Request::is('/') ? 'active' : '' }}"><a href="{{ url('/') }}">Home</a></li>
                         <li class="has-dropdown">
-                            <a href="work.html">Recap schedule</a>
+                            <a href="#">Recap schedule</a>
                             <ul class="dropdown" style="width: 200px;">
                                 <li><a href="{{ route('listschedule')}}">
                                         Last schedule</a></li>
-                                <li><a href="work-grid-without-text.html">
+                                <li><a href="{{ route('todayschedule')}}">
                                         Today schedule</a></li>
                             </ul>
                         </li>
-                        <li class="has-dropdown">
-                            <a href="work.html">Teacher</a>
-                            <ul class="dropdown">
-                                <li><a href="work-grid.html">
-                                        List teacher</a></li>
-                                <li><a href="work-grid-without-text.html">
-                                        Data teacher</a></li>
-                            </ul>
+                        <li class="{{ Request::is('teacher') ? 'active' : '' }}">
+                            <a href="{{ url('teacher') }}">Teacher Data</a>
+
                         </li>
                         <li class="{{ Request::is('/lesson') ? 'active' : '' }}"><a href="{{ url('/lesson') }}">Lesson</a></li>
                         <li class="{{ Request::is('about') ? 'active' : '' }}"><a href="{{ url('/about') }}">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
                         <li class="has-dropdown">
                             <a style="font-size: 17px;"><i class="fa fa-user" aria-hidden="true"></i></a>
                             <ul class="dropdown" style="width: 230px; left: -23px; padding: 15px; padding-left: 25px;">
