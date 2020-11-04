@@ -27,3 +27,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@homeView')->name('home');
 Route::get('/about', 'HomeController@aboutView')->name('about');
 Route::get('/listschedule', 'HomeController@scheduleList')->name('listschedule');
+Route::get('/todayschedule', 'HomeController@todaySchedule')->name('todayschedule');
+Route::get('/getabsen', 'HomeController@dataAbsen');
