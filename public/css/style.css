@@ -2077,3 +2077,8 @@ input[type="text"] {
 .js .animate-box {
     opacity: 0;
 }
+
+.swal2-popup {
+    width: 400px !important;
+    height: 400px;
+}
