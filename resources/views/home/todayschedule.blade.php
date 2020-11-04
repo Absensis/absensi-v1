@@ -35,19 +35,19 @@
                                     <p><b>Action : </b></p>
                                 </div>
                                 <div class="col" style="margin-top: -15px;">
-                                    <a class="dropdown-item addbtn">
+                                    <a class="dropdown-item addbtn" href="#" style="color: black;">
                                         <i class="fa fa-plus fa-sm fa-fw" style="color: green;">
                                         </i> Add Data
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="#" style="color: black;">
                                         <i class="fa fa-file-pdf-o fa-sm fa-fw" style="color: blue;">
                                         </i> Generate Pdf
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <a class="dropdown-item" href="">
+                                    <a class="dropdown-item" href="#" style="color: black;">
                                         <i class="fa fa-file-excel-o fa-sm fa-fw" style="color: green;">
                                         </i> Generate Excel
                                     </a>
@@ -60,8 +60,8 @@
         </div>
 
         <div class="card-body">
-            <div class="table-responsive">
-                <table class="table table-bordered" id="dataSchedule">
+            <div class="table-responsive" style="margin-right: 10px; margin-left: 10px;">
+                <table class=" table table-bordered" id="dataSchedule">
                     <thead style="background-color: #798eea; color: white;">
                         <tr>
                             <th scope=" col">Id</th>
@@ -96,6 +96,60 @@
                     </tfoot>
                 </table>
             </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="formtambah" method="post">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Tanggal Pelajaran</label>
+                        <input type="Date" name="tanggalpelajaran" id="tglpelajaran" class="form-control">
+                    </div>
+                    <div class=" form-group">
+                        <label>Jam Pelajaran</label>
+                        <input type="time" name="jampelajaran" id="jmpelajaran" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Kelas</label>
+                        <input type="text" name="kelas" id="kls" class="form-control" placeholder="Enter Grade Of Class">
+                    </div>
+                    <div class="form-group">
+                        <label>Guru Pengajar</label>
+                        <input type="text" name="gurupengajar" id="grpengajar" class="form-control" placeholder="Enter Name Of Teacher">
+                    </div>
+                    <div class="form-group">
+                        <label>Mata Pelajaran</label>
+                        <input type="text" name="matapelajaran" id="mtapengajar" class="form-control" placeholder="Enter Lesson">
+                    </div>
+                    <div class="form-group">
+                        <label>Materi Pelajaran</label>
+                        <input type="text" name="materipelajaran" id="mtripelajaran" class="form-control" placeholder="Enter learning materials">
+                    </div>
+                    <div class="form-group">
+                        <label>Link Pembelajaran</label>
+                        <input type="text" name="linkpembelajaran" id="lipembelajaran" class="form-control" placeholder="Enter The Link">
+                    </div>
+                    <div class="form-group">
+                        <label>Dokumentasi</label>
+                        <input type="file" name="dokumentasi" id="dkmnts" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea type="text" name="keterangan" id="ket" class="form-control" placeholder="Enter The Information"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type="hidden" name="action" class="btn btn-success" value="Add" />
+                    <input type="submit" value="Add" name="action" class="btn btn-success" />
+                </div>
+            </form>
         </div>
     </div>
 </div>

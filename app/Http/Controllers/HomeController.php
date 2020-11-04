@@ -86,4 +86,25 @@ class HomeController extends Controller
             echo json_encode(array('data' => 0));
         }
     }
+
+    // function add goods
+    public function addData(Request $request)
+    {
+        if ($_POST["action"] == "Add") {
+            $imageName = 'absens/November2020' . $request->dokumentasi->getClientOriginalName();
+            $request->dokumentasi->move(public_path('storage/absens'), $imageName);
+            $absen = new Absen();
+            $absen->tanggal = $request->tanggalpelajaran;
+            $absen->jam_pembelajaran = $request->jampelajaran;
+            $absen->kelas = $request->kelas;
+            $absen->guru_pengajar = $request->gurupengajar;
+            $absen->mata_pelajaran = $request->matapelajaran;
+            $absen->materi_pelajaran = $request->materipelajaran;
+            $absen->link_pembelajaran = $request->linkpembelajaran;
+            $absen->dokumentasi = $imageName;
+            $absen->keterangan = $request->keterangan;
+            $absen->save();
+            echo 'Data Inserted';
+        }
+    }
 }
