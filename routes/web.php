@@ -29,6 +29,7 @@ Route::get('/about', 'HomeController@aboutView')->name('about');
 Route::get('/listschedule', 'HomeController@scheduleList')->name('listschedule');
 Route::get('/todayschedule', 'HomeController@todaySchedule')->name('todayschedule');
 
-//  CRUD
+//  CRUD Absen
 Route::get('/getabsen', 'HomeController@dataAbsen');
-Route::post('/addgoods', 'HomeController@addData');
+Route::post('/addabsen', 'HomeController@addData');
+Route::post('/deleteabsen', 'HomeController@deleteData');

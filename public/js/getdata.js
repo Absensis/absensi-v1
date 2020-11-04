@@ -42,7 +42,7 @@ jQuery(document).ready(function () {
         if (tanggalpelajaran != '' && jampelajaran != '' && kelas != '' && gurupengajar != '' && matapelajaran != '' && materipelajaran != '' && linkpembelajaran != '' && keterangan != '') {
             $.ajax({
                 type: "post",
-                url: "/addgoods",
+                url: "/addabsen",
                 beforeSend: function () {
                     swal({
                         title: 'Menunggu',
@@ -73,5 +73,54 @@ jQuery(document).ready(function () {
                 text: 'Bother fields are required!',
             });
         }
+    });
+
+    // function delete
+    $(document).on('click', '.deletebtn', function () {
+        var id = $(this).attr("id");
+        swal({
+            title: 'Konfirmasi',
+            text: "Apakah anda yakin ingin menghapus ",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Hapus',
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            cancelButtonText: 'Tidak',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "/deleteabsen",
+                    type: "post",
+                    beforeSend: function () {
+                        swal({
+                            title: 'Menunggu',
+                            html: 'Memproses data',
+                            onOpen: () => {
+                                swal.showLoading();
+                            }
+                        });
+                    },
+                    data: {
+                        id: id
+                    },
+                    success: function (data) {
+                        swal(
+                            'Hapus',
+                            'Berhasil Terhapus',
+                            'success'
+                        );
+                        dataabsen.ajax.reload(null, false);
+                    }
+                });
+            } else if (result.dismiss === swal.DismissReason.cancel) {
+                swal(
+                    'Batal',
+                    'Anda membatalkan penghapusan',
+                    'error'
+                );
+            }
+        });
     });
 });

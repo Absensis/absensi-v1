@@ -87,7 +87,7 @@ class HomeController extends Controller
         }
     }
 
-    // function add goods
+    // function add
     public function addData(Request $request)
     {
         if ($_POST["action"] == "Add") {
@@ -106,5 +106,12 @@ class HomeController extends Controller
             $absen->save();
             echo 'Data Inserted';
         }
+    }
+
+    // function delete
+    public function deleteData()
+    {
+        $absen = Absen::find($_POST['id']);
+        $absen->delete();
     }
 }
