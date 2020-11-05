@@ -65,7 +65,7 @@ class HomeController extends Controller
             $img = "<img style='width: 80%;' src='storage/" . $value['dokumentasi'] . "' >";
             $tbody[] = $img;
             $tbody[] = $value['keterangan'];
-            $btn = "<button type='button' class='btn btn-primary btn-icon-split editbtn' name='editbtn' data-toggle='modal' id=" . $value['id'] . " 	style='padding-right: 6%; width: 95%'>
+            $btn = "<button type='button' class='btn btn-icon-split editbtn' name='editbtn' data-toggle='modal' id=" . $value['id'] . " 	style='padding-right: 6%; width: 95%; background-color: blue; color: white'>
                           <span class='icon text-white'>
                               <i class='fa fa-edit'></i>
                           </span>
@@ -108,10 +108,54 @@ class HomeController extends Controller
         }
     }
 
+    // function edit
+    public function editData(Request $request)
+    {
+        if ($_POST["action"] == "Edit") {
+            $imageName = 'absens/November2020' . $request->dokumentasi->getClientOriginalName();
+            $request->dokumentasi->move(public_path('storage/absens'), $imageName);
+            $idabsen = $request->id;
+            $absen = Absen::find($idabsen);
+            $absen->tanggal = $request->tanggalpelajaran;
+            $absen->jam_pembelajaran = $request->jampelajaran;
+            $absen->kelas = $request->kelas;
+            $absen->guru_pengajar = $request->gurupengajar;
+            $absen->mata_pelajaran = $request->matapelajaran;
+            $absen->materi_pelajaran = $request->materipelajaran;
+            $absen->link_pembelajaran = $request->linkpembelajaran;
+            $absen->dokumentasi = $imageName;
+            $absen->keterangan = $request->keterangan;
+            $absen->save();
+            echo 'Data Updated';
+        }
+    }
+
     // function delete
     public function deleteData()
     {
         $absen = Absen::find($_POST['id']);
         $absen->delete();
+    }
+
+    // function get id goods
+    public function getIdAbsen()
+    {
+        $output = array();
+        $data = Absen::find($_POST["id"]);
+        $output['tanggal'] = $data->tanggal;
+        $output['jam_pembelajaran'] = $data->jam_pembelajaran;
+        $output['kelas'] = $data->kelas;
+        $output['guru_pengajar'] = $data->guru_pengajar;
+        $output['mata_pelajaran'] = $data->mata_pelajaran;
+        $output['materi_pelajaran'] = $data->materi_pelajaran;
+        $output['link_pembelajaran'] = $data->link_pembelajaran;
+        $output['keterangan'] = $data->keterangan;
+        if ($data->dokumentasi != '') {
+            $output['dokumentasi'] = '<img style="width: 100%;" src="storage/' . $data->dokumentasi . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->dokumentasi . '"/>';
+        } else {
+            $output['dokumentasi'] = '<input type="hidden" name="hidden_barang_image" value=""/>';
+        }
+
+        echo json_encode($output);
     }
 }

@@ -154,4 +154,63 @@
     </div>
 </div>
 
+<!-- Edit Modal -->
+<div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="formedit" method="post">
+                @csrf
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>Thumbnail</label>
+                        <span id="dokumentasi"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Tanggal Pelajaran</label>
+                        <input type="Date" name="tanggalpelajaran" id="tanggalpelajaran" class="form-control">
+                    </div>
+                    <div class=" form-group">
+                        <label>Jam Pelajaran</label>
+                        <input type="time" name="jampelajaran" id="jampelajaran" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Kelas</label>
+                        <input type="text" name="kelas" id="kelas" class="form-control" placeholder="Enter Grade Of Class">
+                    </div>
+                    <div class="form-group">
+                        <label>Guru Pengajar</label>
+                        <input type="text" name="gurupengajar" id="gurupengajar" class="form-control" placeholder="Enter Name Of Teacher">
+                    </div>
+                    <div class="form-group">
+                        <label>Mata Pelajaran</label>
+                        <input type="text" name="matapelajaran" id="matapelajaran" class="form-control" placeholder="Enter Lesson">
+                    </div>
+                    <div class="form-group">
+                        <label>Materi Pelajaran</label>
+                        <input type="text" name="materipelajaran" id="materipelajaran" class="form-control" placeholder="Enter learning materials">
+                    </div>
+                    <div class="form-group">
+                        <label>Link Pembelajaran</label>
+                        <input type="text" name="linkpembelajaran" id="linkpembelajaran" class="form-control" placeholder="Enter The Link">
+                    </div>
+                    <div class="form-group">
+                        <label>Dokumentasi</label>
+                        <input type="file" name="dokumentasi" id="image" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Keterangan</label>
+                        <textarea type="text" name="keterangan" id="keterangan" class="form-control" placeholder="Enter The Information"></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <input type="hidden" name="id" id="id" class="btn btn-success" value="" />
+                    <input type="hidden" name="action" class="btn btn-success" value="Edit" />
+                    <input type="submit" value="Edit" name="action" class="btn btn-success" />
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
 @endsection

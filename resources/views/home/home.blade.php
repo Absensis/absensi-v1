@@ -33,14 +33,14 @@
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg2.png')}}" alt="">
                         </div>
                     </div>
                 </div>
                 <div class="item">
                     <div class="col-md-8 col-md-offset-2">
                         <div class="featured-entry">
-                            <img class="img-responsive" src="{{ asset('asset/bg1.png')}}" alt="">
+                            <img class="img-responsive" src="{{ asset('asset/bg3.png')}}" alt="">
                         </div>
                     </div>
                 </div>
