@@ -58,11 +58,94 @@ jQuery(document).ready(function () {
                 success: function () {
                     swal({
                         type: 'success',
-                        title: 'Tambah Barang',
-                        text: 'Anda Berhasil Menambah Barang'
+                        title: 'Tambah Absen',
+                        text: 'Anda Berhasil Menambah Absen'
                     });
                     $('#formtambah')[0].reset();
                     $('#addModal').modal('hide');
+                    dataabsen.ajax.reload(null, false);
+                },
+            });
+        } else {
+            Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Bother fields are required!',
+            });
+        }
+    });
+
+    // function get id
+    $(document).on('click', '.editbtn', function () {
+        var id = $(this).attr("id");
+        $.ajax({
+            url: "/getidabsen",
+            type: "post",
+            data: {
+                id: id
+            },
+            dataType: "JSON",
+            success: function (data) {
+                $('#editModal').modal('show');
+                $('#tanggalpelajaran').val(data.tanggal);
+                $('#jampelajaran').val(data.jam_pembelajaran);
+                $('#kelas').val(data.kelas);
+                $('#gurupengajar').val(data.guru_pengajar);
+                $('#matapelajaran').val(data.mata_pelajaran);
+                $('#materipelajaran').val(data.materi_pelajaran);
+                $('#linkpembelajaran').val(data.link_pembelajaran);
+                $('#keterangan').val(data.keterangan);
+                $('#id').val(id);
+                $('#dokumentasi').html(data.dokumentasi);
+            },
+            error: function (xhr, ajaxOptions, thrownError) {
+                console.log(xhr.responseText);
+            }
+        });
+    });
+
+    // function edit
+    $(document).on('submit', '#formedit', function (event) {
+        event.preventDefault();
+        var tanggalpelajaran = $('#tanggalpelajaran').val();
+        var jampelajaran = $('#jampelajaran').val();
+        var kelas = $('#kelas').val();
+        var gurupengajar = $('#gurupengajar').val();
+        var matapelajaran = $('#matapelajaran').val();
+        var materipelajaran = $('#materipelajaran').val();
+        var linkpembelajaran = $('#linkpembelajaran').val();
+        var extension = $('#image').val().split('.').pop().toLowerCase();
+        var keterangan = $('#keterangan').val();
+        if (jQuery.inArray(extension, ['gif', 'png', 'jpg', 'jpeg']) == -1) {
+            alert("Invalid Image");
+            $('#user_image').val('');
+            return false;
+        }
+
+        if (tanggalpelajaran != '' && jampelajaran != '' && kelas != '' && gurupengajar != '' && matapelajaran != '' && materipelajaran != '' && linkpembelajaran != '' && keterangan != '') {
+            $.ajax({
+                type: "post",
+                url: "/editabsen",
+                beforeSend: function () {
+                    swal({
+                        title: 'Menunggu',
+                        html: 'Memproses data',
+                        onOpen: () => {
+                            swal.showLoading();
+                        }
+                    });
+                },
+                data: new FormData(this),
+                contentType: false,
+                processData: false,
+                success: function () {
+                    swal({
+                        type: 'success',
+                        title: 'Edit Absen',
+                        text: 'Anda Berhasil Mengedit Absen'
+                    });
+                    $('#formedit')[0].reset();
+                    $('#editModal').modal('hide');
                     dataabsen.ajax.reload(null, false);
                 },
             });
