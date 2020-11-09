@@ -34,4 +34,5 @@ Route::get('/getabsen', 'HomeController@dataAbsen');
 Route::post('/addabsen', 'HomeController@addData');
 Route::post('/deleteabsen', 'HomeController@deleteData');
 Route::post('/getidabsen', 'HomeController@getIdAbsen');
+Route::post('/getidimage', 'HomeController@getIdImage');
 Route::post('/editabsen', 'HomeController@editData');
