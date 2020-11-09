@@ -17,8 +17,8 @@
     </div>
 </section>
 
-<div class="colorlib-featured" style="margin-bottom: 20px;">
-    <div class="card" style="width: 80%; padding: 10px; margin-left: 10%; position: relative; margin-top: -6%; background-color: white;border-radius: 10px; box-shadow: 0px 3px 19px -9px rgba(0, 0, 0, 0.75);">
+<div class="colorlib-featured" style="margin-bottom: 20px; margin-top: 110px;">
+    <div class="card" style="width: 80%; padding: 10px; margin-left: 10%; background-color: white;border-radius: 10px; box-shadow: 0px 3px 19px -9px rgba(0, 0, 0, 0.75);">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <div class="row" style="margin-top: 10px;">
                 <div class="col-md-11" style="margin-right: 60px; margin-left: 10px;">
@@ -104,6 +104,12 @@
 <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Schedule</h5>
+                <button style="margin-top: -20px;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <form id="formtambah" method="post">
                 @csrf
                 <div class="modal-body">
@@ -158,6 +164,12 @@
 <div class="modal fade" id="editModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Schedule</h5>
+                <button style="margin-top: -20px;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
             <form id="formedit" method="post">
                 @csrf
                 <div class="modal-body">
@@ -213,4 +225,30 @@
     </div>
 </div>
 
+<div class="modal" tabindex="-1" role="dialog" id="imageDetail">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Detail Image</h5>
+                <button style="margin-top: -20px;" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Detail Image</label>
+                    <span id="detailimage"></span>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+
+</script>
 @endsection

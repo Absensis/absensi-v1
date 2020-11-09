@@ -62,7 +62,7 @@ class HomeController extends Controller
             $tbody[] = $value['mata_pelajaran'];
             $tbody[] = $value['materi_pelajaran'];
             $tbody[] = $value['link_pembelajaran'];
-            $img = "<img style='width: 80%;' src='storage/" . $value['dokumentasi'] . "' >";
+            $img = "<button class='imagedetail' type='button' id=" . $value['id'] . "><img style='width: 100%;' src='storage/" . $value['dokumentasi'] . "' /></button>";
             $tbody[] = $img;
             $tbody[] = $value['keterangan'];
             $btn = "<button type='button' class='btn btn-icon-split editbtn' name='editbtn' data-toggle='modal' id=" . $value['id'] . " 	style='padding-right: 6%; width: 95%; background-color: blue; color: white'>
@@ -137,7 +137,7 @@ class HomeController extends Controller
         $absen->delete();
     }
 
-    // function get id goods
+    // function get id
     public function getIdAbsen()
     {
         $output = array();
@@ -150,6 +150,20 @@ class HomeController extends Controller
         $output['materi_pelajaran'] = $data->materi_pelajaran;
         $output['link_pembelajaran'] = $data->link_pembelajaran;
         $output['keterangan'] = $data->keterangan;
+        if ($data->dokumentasi != '') {
+            $output['dokumentasi'] = '<img style="width: 100%;" src="storage/' . $data->dokumentasi . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->dokumentasi . '"/>';
+        } else {
+            $output['dokumentasi'] = '<input type="hidden" name="hidden_barang_image" value=""/>';
+        }
+
+        echo json_encode($output);
+    }
+
+    // function get image per id
+    public function getIdImage()
+    {
+        $output = array();
+        $data = Absen::find($_POST["id"]);
         if ($data->dokumentasi != '') {
             $output['dokumentasi'] = '<img style="width: 100%;" src="storage/' . $data->dokumentasi . '" /><input type="hidden" name="hidden_barang_image" value="' . $data->dokumentasi . '"/>';
         } else {

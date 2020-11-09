@@ -207,3 +207,22 @@ jQuery(document).ready(function () {
         });
     });
 });
+
+$(document).on('click', '.imagedetail', function () {
+    var id = $(this).attr("id");
+    $.ajax({
+        url: "/getidimage",
+        type: "post",
+        data: {
+            id: id
+        },
+        dataType: "JSON",
+        success: function (data) {
+            $('#imageDetail').modal('show');
+            $('#detailimage').html(data.dokumentasi);
+        },
+        error: function (xhr, ajaxOptions, thrownError) {
+            console.log(xhr.responseText);
+        }
+    });
+});

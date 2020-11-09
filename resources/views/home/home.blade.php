@@ -95,7 +95,7 @@
         </div>
         <div class="row">
             <div class="col-md-12 animate-box">
-                <span class="play"><a href="https://vimeo.com/channels/staffpicks/93951774" class="pulse popup-vimeo"><i class="icon-play3"></i></a></span>
+                <span class="play"><a href="https://www.youtube.com/watch?v=NJpEjQb8wA8" class="pulse popup-vimeo"><i class="icon-play3"></i></a></span>
             </div>
         </div>
     </div>
