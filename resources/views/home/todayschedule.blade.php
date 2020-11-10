@@ -17,8 +17,8 @@
     </div>
 </section>
 
-<div class="colorlib-featured" style="margin-bottom: 20px; margin-top: 110px;">
-    <div class="card" style="width: 80%; padding: 10px; margin-left: 10%; background-color: white;border-radius: 10px; box-shadow: 0px 3px 19px -9px rgba(0, 0, 0, 0.75);">
+<div class="colorlib-featured" style="margin-bottom: 20px;">
+    <div class="card" style="width: 80%; padding: 10px; margin-left: 10%; position: relative; margin-top: -6%; background-color: white;border-radius: 10px; box-shadow: 0px 3px 19px -9px rgba(0, 0, 0, 0.75);">
         <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
             <div class="row" style="margin-top: 10px;">
                 <div class="col-md-11" style="margin-right: 60px; margin-left: 10px;">
@@ -41,7 +41,7 @@
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <a class="dropdown-item" href="#" style="color: black;">
+                                    <a class="dropdown-item" href="{{ route('printpdftoday')}}" style="color: black;">
                                         <i class="fa fa-file-pdf-o fa-sm fa-fw" style="color: blue;">
                                         </i> Generate Pdf
                                     </a>
@@ -247,8 +247,4 @@
     </div>
 </div>
 
-<script>
-
-
-</script>
 @endsection

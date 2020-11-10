@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Carbon\Carbon;
+use App\Absen;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,13 +28,25 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@homeView')->name('home');
 Route::get('/about', 'HomeController@aboutView')->name('about');
-Route::get('/listschedule', 'HomeController@scheduleList')->name('listschedule');
-Route::get('/todayschedule', 'HomeController@todaySchedule')->name('todayschedule');
+Route::get('/listschedule', 'ViewController@scheduleList')->name('listschedule');
+Route::get('/todayschedule', 'ViewController@todaySchedule')->name('todayschedule');
 
 //  CRUD Absen
-Route::get('/getabsen', 'HomeController@dataAbsen');
-Route::post('/addabsen', 'HomeController@addData');
-Route::post('/deleteabsen', 'HomeController@deleteData');
-Route::post('/getidabsen', 'HomeController@getIdAbsen');
-Route::post('/getidimage', 'HomeController@getIdImage');
-Route::post('/editabsen', 'HomeController@editData');
+Route::get('/getabsen', 'CrudController@dataAbsen');
+Route::post('/addabsen', 'CrudController@addData');
+Route::post('/deleteabsen', 'CrudController@deleteData');
+Route::post('/getidabsen', 'CrudController@getIdAbsen');
+Route::post('/getidimage', 'CrudController@getIdImage');
+Route::post('/editabsen', 'CrudController@editData');
+
+//  CRUD Last Absen
+Route::get('/getlastabsen', 'CrudController@dataLastAbsen');
+
+
+// Export Pdf
+Route::get('/pdftoday', 'HomeController@pdfToday')->name('printpdftoday');
+
+Route::get('/date', function () {
+    $dataabsen = Absen::where('tanggal', '!=',  Date('Y-m-d'))->get();
+    dd($dataabsen);
+});
