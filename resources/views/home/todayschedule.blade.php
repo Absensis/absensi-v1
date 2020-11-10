@@ -41,7 +41,7 @@
                                     </a>
                                 </div>
                                 <div class="col">
-                                    <a class="dropdown-item" href="#" style="color: black;">
+                                    <a class="dropdown-item" href="{{ route('printpdftoday')}}" style="color: black;">
                                         <i class="fa fa-file-pdf-o fa-sm fa-fw" style="color: blue;">
                                         </i> Generate Pdf
                                     </a>

@@ -6,7 +6,6 @@ use App\Absen;
 use Carbon\Carbon;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Date;
 
 class CrudController extends Controller
 {
@@ -141,7 +140,7 @@ class CrudController extends Controller
     // show databarang in datatable
     public function dataLastAbsen()
     {
-        $dataabsen = Absen::where('tanggal',  Carbon::yesterday())->get();
+        $dataabsen = Absen::where('tanggal', '!=',  Date('Y-m-d'))->get();
         foreach ($dataabsen as $value) {
             $tbody = array();
             $tbody[] = $value['id'];

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use Carbon\Carbon;
+use App\Absen;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,7 +43,10 @@ Route::post('/editabsen', 'CrudController@editData');
 Route::get('/getlastabsen', 'CrudController@dataLastAbsen');
 
 
+// Export Pdf
+Route::get('/pdftoday', 'HomeController@pdfToday')->name('printpdftoday');
+
 Route::get('/date', function () {
-    $yesterday = Carbon::yesterday();
-    dd($yesterday);
+    $dataabsen = Absen::where('tanggal', '!=',  Date('Y-m-d'))->get();
+    dd($dataabsen);
 });
