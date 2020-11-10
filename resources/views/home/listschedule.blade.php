@@ -55,41 +55,39 @@
 
         <div class="card-body">
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-bordered" id="dataLastSchedule">
                     <thead style="background-color: #798eea; color: white;">
                         <tr>
+                            <th scope=" col">Id</th>
                             <th scope=" col">Tanggal</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
+                            <th scope=" col">Jam</th>
+                            <th scope="col">Kelas</th>
+                            <th scope="col">Guru Pengajar</th>
+                            <th scope="col">Mata Pelajaran</th>
+                            <th scope="col">Materi Pelajaran</th>
+                            <th scope="col">Link Pembelajaran</th>
+                            <th scope="col">Dokumentasi</th>
+                            <th scope="col">Keterangan</th>
+                            <th scope="col">Action</th>
                         </tr>
                     </thead>
                     <tbody style="color: black;">
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">5</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                        </tr>
                     </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope=" col">Id</th>
+                            <th scope=" col">Tanggal</th>
+                            <th scope=" col">Jam</th>
+                            <th scope="col">Kelas</th>
+                            <th scope="col">Guru Pengajar</th>
+                            <th scope="col">Mata Pelajaran</th>
+                            <th scope="col">Materi Pelajaran</th>
+                            <th scope="col">Link Pembelajaran</th>
+                            <th scope="col">Dokumentasi</th>
+                            <th scope="col">Keterangan</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </tfoot>
                 </table>
             </div>
         </div>
