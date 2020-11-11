@@ -41,7 +41,7 @@
                                     <label style="font-size: 10px"><b>{{ Auth::user()->name }}</b></label>
                                 </li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item" href="{{ route('profile')}}">
                                         <i class="fa fa-user" aria-hidden="true"></i> Profile
                                     </a>
                                 </li>
