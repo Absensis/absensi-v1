@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class ViewController extends Controller
 {
     // construct
@@ -22,5 +20,11 @@ class ViewController extends Controller
     public function todaySchedule()
     {
         return view('home.todayschedule');
+    }
+
+    // view profile
+    public function profileUser()
+    {
+        return view('home.profile');
     }
 }

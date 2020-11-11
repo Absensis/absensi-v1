@@ -30,6 +30,7 @@ Route::get('/home', 'HomeController@homeView')->name('home');
 Route::get('/about', 'HomeController@aboutView')->name('about');
 Route::get('/listschedule', 'ViewController@scheduleList')->name('listschedule');
 Route::get('/todayschedule', 'ViewController@todaySchedule')->name('todayschedule');
+Route::get('/profile', 'ViewController@profileUser')->name('profile');
 
 //  CRUD Absen
 Route::get('/getabsen', 'CrudController@dataAbsen');
@@ -41,7 +42,6 @@ Route::post('/editabsen', 'CrudController@editData');
 
 //  CRUD Last Absen
 Route::get('/getlastabsen', 'CrudController@dataLastAbsen');
-
 
 // Export Pdf
 Route::get('/pdftoday', 'HomeController@pdfToday')->name('printpdftoday');

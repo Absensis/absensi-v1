@@ -44,7 +44,7 @@
                     <li><a href="tel://1234567920"><i class="icon-phone"></i> + 62 812 1351 7643</a></li>
                     <li><a href="mailto:info@yoursite.com"><i class="icon-envelope"></i> farasjibran@gmail.com</a>
                     </li>
-                    <li><a href="#"><i class="icon-location4"></i> yourwebsite.com</a></li>
+                    <li><a href="https://www.google.com/maps/place/Sekolah+Menengah+Kejuruan+Taruna+Bhakti/@-6.3878486,106.8177975,12z/data=!4m2!3m1!1s0x0:0xc36bccb005ed8408?sa=X&ved=2ahUKEwijmPvz9vrsAhVVH7cAHX3lC10Q_BIwDXoECBEQBQ"><i class="icon-location4"></i> SMK TARUNA BHAKTI</a></li>
                 </ul>
             </div>
         </div>
